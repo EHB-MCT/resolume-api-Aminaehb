@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 8080;
+const port = 8888;
 
 app.use(express.static(__dirname)); // Serve static files from the current directory
 
