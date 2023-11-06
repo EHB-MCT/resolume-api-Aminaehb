@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Hide the button
         resolumeButton.style.display = 'none';
 
-        fetch('http://192.168.129.11:8080/api/v1/composition/layers/1/clips/3/select', {
+        fetch('http://10.2.88.214:4000/api/v1/composition/layers/1/clips/3/select', {
             method: 'POST',
         })
         .then(response => {
