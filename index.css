@@ -1,0 +1,44 @@
+/* Reset default padding and margin for the entire page */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  /* Create a container that takes up the entire viewport */
+  .button-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Style for the buttons */
+  .button {
+    flex: 1; /* Each button takes up half of the container width */
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s; /* Add a transition for the background-color property */
+  }
+  
+  /* Add some spacing and styling to the buttons */
+  .button:first-child {
+    margin-right: 1px; /* Add a small gap between the buttons */
+    background-color: #0077b6; /* Color for the first button */
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .button:last-child {
+    margin-left: 1px; /* Add a small gap between the buttons */
+    background-color: #ff6b6b; /* Color for the second button */
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  /* Style the buttons when they are clicked */
+  .button:active {
+    background-color: #555; /* Change the background color when the button is clicked */
+  }
+  
