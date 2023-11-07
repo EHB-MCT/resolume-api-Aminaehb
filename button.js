@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const resolumeButton = document.getElementById('resolumeButton1');
+    const clickText = document.querySelector('.click-text'); // Select the "Press for Help" text element
 
     resolumeButton.addEventListener('click', function () {
         // Hide the button
@@ -28,6 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 })(layer, column);
             }
 
+            // Hide the "Press for Help" text
+            clickText.style.display = 'none';
+
             // Show the thank-you message in full screen
             showFullScreenMessage();
         }
@@ -37,12 +41,20 @@ document.addEventListener('DOMContentLoaded', function () {
             message.innerText = 'By clicking that button, you just saved a life';
             message.style.fontSize = '48px';
             message.style.color = 'white';
-
+            message.style.backgroundColor = 'red';
+            message.style.fontFamily = 'sans-serif';
+            message.style.textAlign = 'center';
+            message.style.position = 'fixed';
+            message.style.top = '50%';
+            message.style.left = '50%';
+            message.style.transform = 'translate(-50%, -50%)';
+        
             // Create a full-screen message div
             const fullscreenMessage = document.createElement('div');
             fullscreenMessage.classList.add('fullscreen-message');
             fullscreenMessage.appendChild(message);
             document.body.appendChild(fullscreenMessage);
         }
+        
     });
 });
